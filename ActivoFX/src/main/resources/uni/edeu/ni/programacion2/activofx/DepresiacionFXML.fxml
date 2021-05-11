@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="uni.edeu.ni.programacion2.activofx.Controller.DepresiacionFXMLController">
+   <children>
+      <BorderPane layoutX="191.0" layoutY="89.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <VBox prefHeight="183.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="148.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.0" minWidth="10.0" prefWidth="452.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Nombre:" textFill="#ee0fba" />
+                        <Label text="Valor del Activo:" textFill="#e11ba5" GridPane.rowIndex="1" />
+                        <Label text="Tipo de Activo:" textFill="#dd12c2" GridPane.rowIndex="2" />
+                        <Label text="Valor del salvamento:" textFill="#e517b8" GridPane.rowIndex="3" />
+                        <TextField fx:id="txtNombre" GridPane.columnIndex="1" />
+                        <TextField fx:id="txtValorActivo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="txtValorSalvamento" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="ComboBoxTipoDeActivo" prefHeight="25.0" prefWidth="452.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <FlowPane alignment="BOTTOM_CENTER" prefHeight="49.0" prefWidth="600.0">
+                     <children>
+                        <Button fx:id="btnCalcular" mnemonicParsing="false" onAction="#btnCalcularAction" text="Calcular" textFill="#1baae8" />
+                     </children>
+                  </FlowPane>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <VBox prefHeight="223.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="TblNomina" prefHeight="212.0" prefWidth="600.0">
+                    <columns>
+                      <TableColumn fx:id="tblNombre" prefWidth="75.0" text="Nombre Del Activo" />
+                      <TableColumn fx:id="n1" prefWidth="75.0" text="1" />
+                        <TableColumn fx:id="n2" prefWidth="75.0" text="2" />
+                        <TableColumn fx:id="n3" prefWidth="75.0" text="3" />
+                        <TableColumn fx:id="n4" prefWidth="75.0" text="4" />
+                        <TableColumn fx:id="n5" prefWidth="75.0" text="5" />
+                        <TableColumn fx:id="n6" prefWidth="75.0" text="6" />
+                        <TableColumn fx:id="n7" prefWidth="75.0" text="7" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
